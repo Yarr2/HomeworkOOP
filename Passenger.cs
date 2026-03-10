@@ -13,7 +13,9 @@ public class Passenger
     private string _name;
     private int _passport;
     private ServiceLevel _serviceLevel;
-    
+
+    public int Passport => _passport;
+
     public Passenger(int id, string name, int passport, ServiceLevel serviceLevel)
     {
         _id = id;
