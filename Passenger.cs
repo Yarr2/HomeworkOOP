@@ -7,14 +7,14 @@ public enum ServiceLevel
     Economy,Business,Premium
 }
 
-public class Passanger
+public class Passenger
 {
     private int _id;
     private string _name;
     private int _passport;
     private ServiceLevel _serviceLevel;
     
-    public Passanger(int id, string name, int passport, ServiceLevel serviceLevel)
+    public Passenger(int id, string name, int passport, ServiceLevel serviceLevel)
     {
         _id = id;
         _name = name;
