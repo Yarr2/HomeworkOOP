@@ -67,8 +67,16 @@ public class CompanyManager
         }
     }
     
-    
-
-    
+    public void FlightFiltration(string destination = null, FlightStatus? status = null) // ? makes unnullable type nullable 
+    { 
+        foreach (Flight flight in _flights)
+        {
+            if ((destination == null || destination == flight.Destination) &&
+                (status == null || status == flight.Status))
+            {
+                Console.WriteLine($"Flight number {flight.FlightNumber}");
+            }
+        }
+    }
     
 }
