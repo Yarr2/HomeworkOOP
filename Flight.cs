@@ -5,13 +5,13 @@ public class Flight
     // PROPERTIES
     public int FlightNumber { get; private set; }
     public string Destination { get; private set; }
-    public DateTime DepartureDateAndTime { get; private set; }
+    public string DepartureDateAndTime { get; private set; }
     public int Capacity { get; private set; }
     public FlightStatus Status { get; private set; }
     public List<Passenger> RegisteredPassengers { get; private set; } = new();
 
     // КОНСТРУКТОР
-    public Flight(int flightNumber, string destination, DateTime departureDateAndTime, int capacity, FlightStatus status = FlightStatus.Registration)
+    public Flight(int flightNumber, string destination, string departureDateAndTime, int capacity, FlightStatus status = FlightStatus.Registration)
     {
         FlightNumber = flightNumber;
         Destination = destination;
@@ -26,11 +26,11 @@ public class Flight
         if (RegisteredPassengers.Count < Capacity)
         {
             RegisteredPassengers.Add(passenger);
-            Console.WriteLine($"Passenger {passenger} added to the flight.");
+            Console.WriteLine($"Passenger {passenger.Name} added to the flight.");
         }
         else
         {
-            Console.WriteLine($"Passenger {passenger} isn't added, not enough space.");
+            Console.WriteLine($"Passenger {passenger.Name} isn't added, not enough space.");
         }
     }
 

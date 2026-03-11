@@ -55,7 +55,7 @@ public class CompanyManager
 
     public void FinishFlight(Flight flight)
     {
-        if (flight.Status != FlightStatus.Arrived)
+        if (flight.Status == FlightStatus.Arrived)
         {
             _flights.Remove(flight);
             _history.Push(flight);
