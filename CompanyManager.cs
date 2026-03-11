@@ -51,9 +51,6 @@ public class CompanyManager
         Passenger passenger = _boarding.Dequeue();
         flight.AddPassengerToFlight(passenger);
     }
-    
-    
-    
 
     
 }
