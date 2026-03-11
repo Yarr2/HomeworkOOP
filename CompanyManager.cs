@@ -46,7 +46,10 @@ public class CompanyManager
 
     public void OnboardNextPassenger()
     {
-        // wait for Anna
+        if (_boarding.Count == 0) return;
+        Flight flight = _boardingFlights.Dequeue();
+        Passenger passenger = _boarding.Dequeue();
+        flight.AddPassengerToFlight(passenger);
     }
     
     
