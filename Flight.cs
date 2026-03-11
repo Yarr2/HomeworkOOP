@@ -11,7 +11,7 @@ public class Flight
     public List<Passenger> RegisteredPassengers { get; private set; } = new();
 
     // КОНСТРУКТОР
-    public Flight(int flightNumber, string destination, DateTime departureDateAndTime, int capacity, FlightStatus status)
+    public Flight(int flightNumber, string destination, DateTime departureDateAndTime, int capacity, FlightStatus status = FlightStatus.Registration)
     {
         FlightNumber = flightNumber;
         Destination = destination;
