@@ -28,6 +28,11 @@ public class Passenger
         _passport = passport;
     }
 
+    public override string ToString()
+    {
+        return $"Passenger name - {Name},id - {_id}, service - {_serviceLevel}, passport - {_passport}";
+    }
+
     public bool IsPassportsNumbersSame(int passportNumber)
     {
         return (passportNumber == _passport);
