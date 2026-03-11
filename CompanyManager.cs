@@ -78,5 +78,12 @@ public class CompanyManager
             }
         }
     }
-    
+
+    public void PrintHistory()
+    {
+        foreach (Flight flight in _history)
+        {
+            Console.WriteLine($"Flight number {flight.FlightNumber}");
+        }
+    }
 }
