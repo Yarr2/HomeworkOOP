@@ -51,9 +51,24 @@ public class CompanyManager
         Passenger passenger = _boarding.Dequeue();
         flight.AddPassengerToFlight(passenger);
     }
-    
+
+
+    public void FinishFlight(Flight flight)
+    {
+        if (flight.Status != FlightStatus.Arrived)
+        {
+            _flights.Remove(flight);
+            _history.Push(flight);
+            Console.WriteLine($"Flight {flight.FlightNumber} finished.");
+        }
+        else
+        {
+            Console.WriteLine($"Can't finish the flight, current status {flight.Status}");
+        }
+    }
     
     
 
+    
     
 }
