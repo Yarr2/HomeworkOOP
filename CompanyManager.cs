@@ -33,6 +33,23 @@ public class CompanyManager
         _boarding.Enqueue(passenger);
         _boardingFlights.Enqueue(flight);
     }
+
+    public Passenger GetPassengerByPassport(int passport)
+    {
+        if (!_passengers.TryGetValue(passport, out Passenger passenger))
+        {
+            throw new Exception("There is no passenger with this passport");
+        }
+
+        return passenger;
+    }
+
+    public void OnboardNextPassenger()
+    {
+        // wait for Anna
+    }
+    
+    
     
 
     
